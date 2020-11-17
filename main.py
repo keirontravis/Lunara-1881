@@ -1,5 +1,5 @@
 import discord # All I know is pain
-from discord.ext import commands, tasks
+from discord.ext import commands
 client = commands.Bot(
     command_prefix="^",  # Don't make it a closed diamond bracket
     description="the tutorial girl is hot >:D",  # Actual comment on our video game
@@ -19,8 +19,12 @@ async def on_message(message):
         await message.channel.send('Subscribe to keirontravis on Twitch')
     if message.content.startswith(client.command_prefix + 'test'):
         await message.channel.send(message)  # (I brute forced it, yay)
+    if len(message.content) == 1: # For example, just the letter "a"
+        await message.channel.send(chr(ord(message.content)+1))
+    if "raccoon" in message.content:
+        await message.channel.send("https://media.discordapp.net/attachments/753571945605234728/777921419249975316/racc_dance.gif")
 @client.command
-async def command(ctx):
+async def command(ctx): # If i can do ^command and this works, that'd be poggers
   await ctx.send("Lunara")
 
 # ok now that's all setup we just have to run the damn thing

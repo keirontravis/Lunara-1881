@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "Lunara#1881"
 version = "0.1.0"
-description = ""
-authors = [""]
+description = "Hey OCR, wanna see me speedrun developing a Discord Bot?"
+authors = ["Keiron \"ktrav258\" Travis"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
